@@ -1,19 +1,22 @@
 from flask import Flask, render_template, jsonify, request
 import requests
-import numpy as np
 
-import import_ipynb
+# import all of these modules
+import numpy as np
+import import_ipynb # used to import classes from notebooks
 from suv_purchase import Logreg
 import torch
 from sklearn.preprocessing import PolynomialFeatures
 
 
 
-model = Logreg(20, 1)
-model.load_state_dict(torch.load('suv_predictor.pt'))
-model.eval()
+model = Logreg(20, 1) # initialize a new model
+model.load_state_dict(torch.load('suv_predictor.pt')) # load trained weights and bias from file
+model.eval() # set it to eval mode
 
-poly = PolynomialFeatures(degree=3)
+# We need to convert 3 input features into the 20 polynomial features
+# that the model can accept
+poly = PolynomialFeatures(degree=3) 
 
 
 app = Flask(__name__)
@@ -31,6 +34,7 @@ def get_weather():
     age = request.args.get("age")
     salary = request.args.get("salary")
 
+    # Convert gender to lower case, and handle invalid inputs
     gender = gender.lower()
     if gender == 'male':
         gender = 0
@@ -42,25 +46,27 @@ def get_weather():
         return jsonify({"code": 500, "msg": "Invalid Gender"})
 
 
+    # Age must be integer
     try:
         age = int(age)
     except ValueError:
         return jsonify({"code": 500, "msg": "Invalid Age"})
 
     
+    # Salary must be integer
     try:
         salary = int(salary)
     except ValueError:
         return jsonify({"code": 500, "msg": "Invalid salary"})
 
 
-
+    # form input variables into a 1x20 torch.tensor
     inputs_raw = np.array([[age, salary, gender]])
     inputs_poly = poly.fit_transform(inputs_raw)
-
     inputs = torch.from_numpy(inputs_poly).float()
 
-    pred = model(inputs).item()
+    # make prediction
+    pred = model(inputs).item() #.item() gets the value from the tensor
     result = "YES"
     if pred < 0.5:
         result = "NO"
