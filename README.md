@@ -31,7 +31,7 @@ $ pip install -r requirements.txt
 :: Windows
 \> python -m pip install -r requirements.txt
 ```
-4. You are ready to go!
+4. You are ready to go! Both the course material notebook and the programming project are meant to be done on your local jupyter notebook.
 
 ## Topic 2 -- Logistic Regression Notebook
 
@@ -134,8 +134,9 @@ $ pip install -r requirements.txt
 
 
 ## SUV Purchase Predictor Web App
-
-#### Starting off in suv_purchase.ipynb
+#### Setting up the environment
+- Start off by opening `suv_purchase.ipynb` in the jupyter notebook, as well as running `suv.py` in the **vscode terminal**. The web app can be opened in a browser by `CTRL` + left-clicking on the localhost address in the terminal when running `suv.py`
+#### suv_purchase.ipynb
 - Reference code has been commented, therefore read the comments to understand what the code is doing.
 - This programming project is meant to be taught in a code-and-commentary style.
 - It is recommended to review the reference code before teaching
