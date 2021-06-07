@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Weather App</title>
+        <title>SUV Purchase Prediction</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     </head>
     <body>
+        <div class="intf">
+            <h1 id="title">Should You Get An SUV?</h1>
+            <h3 id="subtitle"> Enter your Gender, Age, and Annual Salary below to find out!</h3>
+            <p><input type="text", placeholder="Gender", class="inputs" id="gender"></p>
+            <p><input type="text", placeholder="Age", class="inputs" id="age"></p>
+            <p><input type="text", placeholder="Annual Salary", class="inputs" id="salary"></p>
+            <input type="button", value="Predict" id="predict">
 
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
+            <div class="data">
+                <p></p>
+                
+            </div>
+        </div>
+
+        <script src="{{url_for('static', filename='dynam.js')}}"></script>
 
     </body>
 </html>
