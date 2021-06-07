@@ -33,7 +33,7 @@ $ pip install -r requirements.txt
 ```
 4. You are ready to go!
 
-### Topic 2 -- Logistic Regression Notebook
+## Topic 2 -- Logistic Regression Notebook
 
 #### Installing Dependencies
 - Talk a bit about the dependencies to install (eg. what each module is used for)
@@ -133,7 +133,7 @@ $ pip install -r requirements.txt
 - Write down the observations
 
 
-### SUV Purchase Predictor Web App
+## SUV Purchase Predictor Web App
 
 #### Starting off in suv_purchase.ipynb
 - Reference code has been commented, therefore read the comments to understand what the code is doing.
