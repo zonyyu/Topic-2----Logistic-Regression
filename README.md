@@ -10,7 +10,7 @@ This section details instructions to guide the instructor in delivering the cour
 Below is the curriculum of this repository, as well as the order of content to be delivered. **Be sure to familiarize yourself with the code before teaching! Feel free to explore the notebooks as well as the web app `suv.py`**.
 
 ### Getting set up (Jupyter Notebook)
-1. Clone this repo into a working directory
+1. Clone this repo into a working directory and switch to the **workshop** branch.
 2. Create and activate a virtual environment with the command below:
 ```bash
 # MacOS/Linux
@@ -34,10 +34,11 @@ $ pip install -r requirements.txt
 4. You are ready to go! 
 
 ### Getting set up (Google Colab)
-1. Open the desired notebook in Google Colab
-2. Unzip your `colab.zip` file in Google Colab
-3. In your notebook, be sure to run `pip install -r requirements.txt to install all necessary components`
-4. You are ready to go! 
+1. Clone this repo into a working directory and switch to the **workshop** branch.
+2. Open the desired notebook in Google Colab
+3. Unzip your `colab.zip` file in Google Colab
+4. In your notebook, be sure to run `pip install -r requirements.txt to install all necessary components`
+5. You are ready to go! 
 
 
 ## Topic 2 -- Logistic Regression Notebook
