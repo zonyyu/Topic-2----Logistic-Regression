@@ -3,15 +3,12 @@ import requests
 
 # import all of these modules
 import numpy as np
-import import_ipynb # used to import classes from notebooks
-from suv_purchase import Logreg
 import torch
 from sklearn.preprocessing import PolynomialFeatures
 
 
 
-model = Logreg(20, 1) # initialize a new model
-model.load_state_dict(torch.load('suv_predictor.pt')) # load trained weights and bias from file
+model = torch.jit.load('suv_predictor.pt')
 model.eval() # set it to eval mode
 
 # We need to convert 3 input features into the 20 polynomial features
@@ -70,6 +67,8 @@ def get_weather():
     result = "YES"
     if pred < 0.5:
         result = "NO"
+
+    print(result)
     
 
    
