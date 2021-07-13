@@ -37,7 +37,7 @@ $ pip install -r requirements.txt
 1. Clone this repo into a working directory and switch to the **workshop** branch.
 2. Open the desired notebook in Google Colab
 3. Unzip your `colab.zip` file in Google Colab
-4. In your notebook, be sure to run `pip install -r requirements.txt to install all necessary components`
+4. In your notebook, be sure to install the necessary dependencies. Do not install directly from `requirements.txt`
 5. You are ready to go! 
 
 
