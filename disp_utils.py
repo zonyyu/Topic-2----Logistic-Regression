@@ -1,7 +1,6 @@
 import numpy as np
 from bokeh.plotting import figure, show, output_notebook
 from bokeh.layouts import row
-import import_ipynb
 
 
 x = np.array([1.4, 1.5, 1.56, 1.65, 1.63, 1.74, 1.92, 1.96, 2.04, 2.08])
